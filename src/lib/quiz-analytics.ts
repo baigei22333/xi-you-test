@@ -15,7 +15,9 @@ function analyticsEnabled(): boolean {
 
 /** 静态导出（Cloudflare Pages）无 /api，需指向 Worker；本地 next dev 可用相对路径回退。 */
 function ingestUrl(): string {
-  const u = process.env.NEXT_PUBLIC_QUIZ_ANALYTICS_INGEST_URL?.trim();
+  const u =
+    process.env.NEXT_PUBLIC_QUIZ_ANALYTICS_INGEST_URL?.trim() ||
+    process.env.NEXT_PUBLIC_QUIZ_ANALYTICS_URL?.trim();
   if (u) return u.replace(/\/$/, "");
   return "/api/analytics/quiz";
 }
@@ -26,7 +28,8 @@ function isAbsoluteHttpUrl(url: string): boolean {
 
 /**
  * Fire-and-forget: 答题完成时上报（选项、各角色总分、匹配角色）。
- * 需设置 NEXT_PUBLIC_ENABLE_QUIZ_ANALYTICS=1；服务端可配置转发到 CF Worker，见 /api/analytics/quiz。
+ * 需设置 NEXT_PUBLIC_ENABLE_QUIZ_ANALYTICS=1 与 Worker 地址（任一名称）：
+ * NEXT_PUBLIC_QUIZ_ANALYTICS_INGEST_URL 或 NEXT_PUBLIC_QUIZ_ANALYTICS_URL。
  * 若站点已启用 Cloudflare Zaraz，会额外调用 zaraz.track("quiz_complete", …)。
  */
 export function trackQuizComplete(
