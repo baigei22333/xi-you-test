@@ -1,0 +1,17 @@
+# 答题埋点 Worker：与前端 NEXT_PUBLIC_QUIZ_ANALYTICS_INGEST_URL 指向同一 Worker URL
+# 部署：npx wrangler deploy
+# 登录：npx wrangler login
+
+name = "xi-you-quiz-analytics"
+main = "workers/quiz-analytics-ingest.js"
+compatibility_date = "2024-11-01"
+
+# 可选密钥（勿写进仓库）：npx wrangler secret put INGEST_SECRET
+# 与 Pages 环境变量 NEXT_PUBLIC_QUIZ_ANALYTICS_TOKEN 保持一致
+
+# 需要把事件写入 Analytics Engine 时：
+# 1. 在 Cloudflare 控制台创建 Analytics Engine 数据集（名称自定，如 quiz_events）
+# 2. 取消下面三行注释，并把 dataset 改成你的数据集名
+# [[analytics_engine_datasets]]
+# binding = "QUIZ_EVENTS"
+# dataset = "quiz_events"

@@ -11,7 +11,8 @@
     "preview:static": "npx --yes serve@14 out -l 8788",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy:quiz-analytics": "npx --yes wrangler@4 deploy"
   },
   "dependencies": {
     "lucide-react": "^1.9.0",

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Ma_Shan_Zheng, Noto_Serif_SC } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { SiteShell } from "@/components/SiteShell";
 
@@ -56,6 +57,16 @@ export default function RootLayout({
       className={`${notoSerif.variable} ${maShan.variable} h-full antialiased`}
     >
       <body className="min-h-full">
+        {process.env.NEXT_PUBLIC_CF_BEACON_TOKEN ? (
+          <Script
+            id="cf-web-analytics"
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            strategy="afterInteractive"
+            data-cf-beacon={JSON.stringify({
+              token: process.env.NEXT_PUBLIC_CF_BEACON_TOKEN,
+            })}
+          />
+        ) : null}
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

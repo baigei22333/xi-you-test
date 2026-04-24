@@ -20,7 +20,12 @@ import {
   saveResultFallbackId,
   type PersistedQuiz,
 } from "@/lib/quiz-storage";
-import { computeResult, type Answers } from "@/lib/scoring";
+import { trackQuizComplete } from "@/lib/quiz-analytics";
+import {
+  computeResult,
+  computeScoreBreakdown,
+  type Answers,
+} from "@/lib/scoring";
 
 function allAnswered(a: Answers) {
   return QUESTIONS.every((q) => Boolean(a[q.id]));
@@ -37,6 +42,11 @@ export function QuizClient() {
     const saved = loadQuiz();
     if (saved && allAnswered(saved.answers)) {
       const id = computeResult(saved.answers);
+      trackQuizComplete({
+        characterId: id,
+        answers: saved.answers,
+        scores: computeScoreBreakdown(saved.answers),
+      });
       clearQuiz();
       saveResultFallbackId(id);
       flushSync(() => {
@@ -75,6 +85,11 @@ export function QuizClient() {
 
   const goResult = useCallback((finalAnswers: Answers) => {
     const id = computeResult(finalAnswers);
+    trackQuizComplete({
+      characterId: id,
+      answers: finalAnswers,
+      scores: computeScoreBreakdown(finalAnswers),
+    });
     clearQuiz();
     saveResultFallbackId(id);
     const path = `/result?c=${encodeURIComponent(id)}`;
