@@ -7,9 +7,10 @@ import {
   useMemo,
   useState,
 } from "react";
+import { flushSync } from "react-dom";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Loader2, Sparkles } from "lucide-react";
 import { QUESTIONS } from "@/lib/data";
 import {
   clearQuiz,
@@ -30,20 +31,30 @@ export function QuizClient() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [hydrated, setHydrated] = useState(false);
+  const [isFinishing, setIsFinishing] = useState(false);
 
   useEffect(() => {
     const saved = loadQuiz();
+    if (saved && allAnswered(saved.answers)) {
+      const id = computeResult(saved.answers);
+      clearQuiz();
+      saveResultFallbackId(id);
+      flushSync(() => {
+        setIsFinishing(true);
+        setHydrated(true);
+      });
+      requestAnimationFrame(() => {
+        window.location.replace(
+          `${window.location.origin}/result?c=${encodeURIComponent(id)}`,
+        );
+      });
+      return;
+    }
     startTransition(() => {
       if (saved) {
-        if (allAnswered(saved.answers)) {
-          const id = computeResult(saved.answers);
-          clearQuiz();
-          router.replace(`/result?c=${encodeURIComponent(id)}`);
-        } else {
-          setAnswers(saved.answers);
-          const firstOpen = QUESTIONS.findIndex((q) => !saved.answers[q.id]);
-          setStep(Math.min(firstOpen, QUESTIONS.length - 1));
-        }
+        setAnswers(saved.answers);
+        const firstOpen = QUESTIONS.findIndex((q) => !saved.answers[q.id]);
+        setStep(Math.min(firstOpen, QUESTIONS.length - 1));
       }
       setHydrated(true);
     });
@@ -67,11 +78,14 @@ export function QuizClient() {
     clearQuiz();
     saveResultFallbackId(id);
     const path = `/result?c=${encodeURIComponent(id)}`;
-    if (typeof window !== "undefined") {
-      window.location.assign(path);
-    } else {
-      router.push(path);
-    }
+    flushSync(() => setIsFinishing(true));
+    requestAnimationFrame(() => {
+      if (typeof window !== "undefined") {
+        window.location.assign(path);
+      } else {
+        router.push(path);
+      }
+    });
   }, [router]);
 
   const onPick = (optionId: string) => {
@@ -92,11 +106,36 @@ export function QuizClient() {
   const onRestart = () => {
     clearQuiz();
     clearResultFallbackId();
+    setIsFinishing(false);
     setAnswers({});
     setStep(0);
   };
 
   const optionLetters = useMemo(() => ["A", "B", "C", "D"], []);
+
+  if (isFinishing) {
+    return (
+      <div
+        className="flex min-h-[50vh] flex-col items-center justify-center gap-5 px-4"
+        role="status"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <Loader2
+          className="h-12 w-12 animate-spin text-[color:var(--accent)]"
+          aria-hidden
+        />
+        <div className="text-center">
+          <p className="font-display text-lg text-[color:var(--accent)]">
+            正在生成结果
+          </p>
+          <p className="mt-2 text-sm text-[color:var(--muted)]">
+            请稍候，正在为你匹配西游角色…
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   if (!hydrated || !question) {
     return (
