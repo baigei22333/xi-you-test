@@ -11,6 +11,4 @@
   </defs>
   <rect width="640" height="800" rx="24" fill="url(#bg8)"/>
   <polygon points="320,200 420,460 220,460" fill="url(#flame)"/>
-  <text x="320" y="620" text-anchor="middle" fill="#ffc14a" font-family="serif" font-size="56" font-weight="600">ê</text>
-  <text x="320" y="680" text-anchor="middle" fill="#e8b8c8" font-family="sans-serif" font-size="22"> · ÍQ</text>
 </svg>

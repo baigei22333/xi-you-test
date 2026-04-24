@@ -12,6 +12,4 @@
   <rect width="640" height="800" rx="24" fill="url(#bg5)"/>
   <ellipse cx="320" cy="520" rx="280" ry="80" fill="url(#sea)"/>
   <path d="M180 360 Q320 220 460 360 T520 420" stroke="#e8f4ff" stroke-width="6" fill="none" opacity="0.35" stroke-linecap="round"/>
-  <text x="320" y="620" text-anchor="middle" fill="#e8f4ff" font-family="serif" font-size="52" font-weight="600">}™l</text>
-  <text x="320" y="680" text-anchor="middle" fill="#9cb4d6" font-family="sans-serif" font-size="22">ђН · аЪ</text>
 </svg>

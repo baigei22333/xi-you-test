@@ -92,17 +92,21 @@ export function ResultClient() {
       </header>
 
       <article className="overflow-hidden rounded-3xl border border-[color:var(--card-border)] bg-[color:var(--card)] shadow-[0_28px_100px_rgba(0,0,0,0.45)] backdrop-blur-md">
-        <div className="relative aspect-[4/5] w-full max-h-[min(70vh,520px)] bg-black/30 sm:aspect-[16/10] sm:max-h-[420px]">
-          {/* 使用原生 img：SVG + next/image fill 在部分静态托管环境下不渲染 */}
+        <div className="relative w-full overflow-hidden bg-black/30">
+          {/* 原生 img + 块级布局：避免 absolute/fill 与 aspect 组合在部分环境下高度为 0 */}
           {/* eslint-disable-next-line @next/next/no-img-element -- SVG 英雄区需可靠展示 */}
           <img
             src={character.heroImage}
             alt={heroAlt}
             width={640}
             height={800}
-            className="absolute inset-0 h-full w-full object-cover object-top"
             decoding="async"
             fetchPriority="high"
+            className="block w-full object-cover object-top"
+            style={{
+              maxHeight: "min(70vh, 520px)",
+              minHeight: "240px",
+            }}
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
