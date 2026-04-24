@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[color:var(--muted)]">
           取经路上，有人执善念、有人破困局、有人守后方。回答 24
-          道题，看看你的气质更贴近师徒中的哪一位，或观音、二郎、哪吒等经典形象。
+          道题，从 24 位西游经典形象中匹配气质：师徒一行、观音普贤文殊、天庭与妖界角色等。
         </p>
       </header>
 

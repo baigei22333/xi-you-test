@@ -18,6 +18,22 @@ export const CHARACTER_IDS: CharacterId[] = [
   "guanyin",
   "erlang",
   "nezha",
+  "yudi",
+  "rulai",
+  "puti",
+  "taishang",
+  "zhenyuanzi",
+  "niuwang",
+  "tieshan",
+  "honghaier",
+  "baigujing",
+  "liuer",
+  "huangmei",
+  "kuimulang",
+  "milefo",
+  "wenshu",
+  "puxian",
+  "dapeng",
 ];
 
 const characterMap = new Map(CHARACTERS.map((c) => [c.id, c]));

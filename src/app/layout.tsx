@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "西游人物匹配 · 性格小测",
     description:
-      "24 道情境题，看看你最像西游中的哪一位：唐僧、悟空、八戒、沙僧……",
+      "24 道情境题，匹配西游宇宙 24 位经典形象：师徒、菩萨、妖王与天庭神祇等。",
     type: "website",
     locale: "zh_CN",
   },

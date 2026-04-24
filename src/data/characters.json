@@ -198,5 +198,405 @@
         "explanation": "你保留真诚与热烈，能把团队从沉闷里点燃。"
       }
     ]
+  },
+  {
+    "id": "yudi",
+    "name": "玉皇大帝",
+    "subtitle": "天庭 · 秩序与权衡",
+    "heroImage": "/characters/yudi.webp",
+    "summary": "你习惯站在更高一层看全局：既要维持规则，也要在各方之间找平衡。你不轻易表态，但一旦定调，就希望流程能稳稳落地。",
+    "traits": [
+      {
+        "word": "统筹全局",
+        "explanation": "你能把碎片信息收成一张「地图」，知道此刻最该保什么、可以放什么。"
+      },
+      {
+        "word": "审慎定夺",
+        "explanation": "你不喜欢被情绪推着走，重大节点会反复确认事实与后果。"
+      },
+      {
+        "word": "规则意识",
+        "explanation": "你相信边界与程序能减少内耗，也愿意为公平承担协调成本。"
+      },
+      {
+        "word": "保持距离",
+        "explanation": "你明白身份与立场会带来距离，但仍尽量让决策显得可预期、可沟通。"
+      }
+    ]
+  },
+  {
+    "id": "rulai",
+    "name": "如来佛祖",
+    "subtitle": "觉悟 · 格局与收束",
+    "heroImage": "/characters/rulai.webp",
+    "summary": "你看得远，也收得住。复杂局面里，你倾向用更大的框架解释当下，把冲突放回意义与因果里，让人心慢慢静下来。",
+    "traits": [
+      {
+        "word": "格局宏大",
+        "explanation": "你不纠结一时输赢，更在意长期走向是否健康、是否值得。"
+      },
+      {
+        "word": "温和收束",
+        "explanation": "你擅长把尖锐对立轻轻按下，给彼此留台阶与反思空间。"
+      },
+      {
+        "word": "洞察人性",
+        "explanation": "你知道恐惧与执念从哪来，因此批评少、点拨多。"
+      },
+      {
+        "word": "举重若轻",
+        "explanation": "你越难越稳，语气平静，但分量很足。"
+      }
+    ]
+  },
+  {
+    "id": "puti",
+    "name": "菩提祖师",
+    "subtitle": "传道 · 点拨与自立",
+    "heroImage": "/characters/puti.webp",
+    "summary": "你更像引路人：给方法、给边界，但把路留给对方自己走。你欣赏聪明与锐气，也明白真正的成长来自自觉。",
+    "traits": [
+      {
+        "word": "因材施教",
+        "explanation": "你会根据对方心性调整表达方式，让建议听得进去、用得上。"
+      },
+      {
+        "word": "点到为止",
+        "explanation": "你不替人做完所有选择，留白反而让人成长更快。"
+      },
+      {
+        "word": "深藏不露",
+        "explanation": "你不炫耀资历与手段，关键处才出手。"
+      },
+      {
+        "word": "理性幽默",
+        "explanation": "你能用一句轻描淡写化解紧张，又不失分寸。"
+      }
+    ]
+  },
+  {
+    "id": "taishang",
+    "name": "太上老君",
+    "subtitle": "玄门 · 沉淀与炼化",
+    "heroImage": "/characters/taishang.webp",
+    "summary": "你相信「慢火炼真金」：经验、流程与反复试验，能把粗糙的想法炼成可靠方案。你不爱喧哗，但对原理与细节很较真。",
+    "traits": [
+      {
+        "word": "深究原理",
+        "explanation": "你不满足于表面结论，喜欢追问为什么行、为什么不行。"
+      },
+      {
+        "word": "长期主义",
+        "explanation": "你愿意为可复用的能力付出时间，而不是只追短期热闹。"
+      },
+      {
+        "word": "克制表达",
+        "explanation": "话不多，但每句往往落在要害。"
+      },
+      {
+        "word": "化繁为简",
+        "explanation": "复杂问题最后被你收成几条可执行的规矩或步骤。"
+      }
+    ]
+  },
+  {
+    "id": "zhenyuanzi",
+    "name": "镇元子",
+    "subtitle": "地仙之祖 · 体面与分寸",
+    "heroImage": "/characters/zhenyuanzi.webp",
+    "summary": "你重视体面与互惠：待客有道，底线也清晰。你可以很谦和，但触犯原则时，你的态度会立刻变得严肃而明确。",
+    "traits": [
+      {
+        "word": "礼数周到",
+        "explanation": "你擅长把关系维持在「互相尊重」的温度里。"
+      },
+      {
+        "word": "底线清晰",
+        "explanation": "好说话不等于没原则；你越界时，你会明确表态。"
+      },
+      {
+        "word": "资源意识",
+        "explanation": "你知道人情与筹码如何匹配，避免空口承诺。"
+      },
+      {
+        "word": "沉稳自持",
+        "explanation": "场面越大，你越不露声色。"
+      }
+    ]
+  },
+  {
+    "id": "niuwang",
+    "name": "牛魔王",
+    "subtitle": "平天大圣 · 霸气与软肋",
+    "heroImage": "/characters/niuwang.webp",
+    "summary": "你气场强、担子重，习惯自己扛一片天。你讲义气，也有执念；在外硬气，在内却可能被少数几个人与事牵动。",
+    "traits": [
+      {
+        "word": "强势担当",
+        "explanation": "关键时刻你敢拍板，也愿意为结果负责。"
+      },
+      {
+        "word": "义气为先",
+        "explanation": "你对认定的圈子非常护短，讨厌背刺与敷衍。"
+      },
+      {
+        "word": "欲望真实",
+        "explanation": "你不装圣人，承认自己在意名利、情感与尊严。"
+      },
+      {
+        "word": "刚柔并存",
+        "explanation": "你对外锋利，对在乎的人却会露出难得的软处。"
+      }
+    ]
+  },
+  {
+    "id": "tieshan",
+    "name": "铁扇公主",
+    "subtitle": "罗刹女 · 锋芒与隐忍",
+    "heroImage": "/characters/tieshan.webp",
+    "summary": "你心里有火也有伤：嘴上硬、底线硬，但深处仍渴望被理解。你擅长自我保护，也在学习不把所有人挡在门外。",
+    "traits": [
+      {
+        "word": "自我保护",
+        "explanation": "你对背叛与轻视敏感，会先筑起边界。"
+      },
+      {
+        "word": "嘴硬心软",
+        "explanation": "语气冲的时候，未必是真的拒绝，有时是怕再失望。"
+      },
+      {
+        "word": "果断决绝",
+        "explanation": "一旦认定关系或合作不可续，你能切断得很快。"
+      },
+      {
+        "word": "韧劲十足",
+        "explanation": "你能扛住长期压力，不轻易认输。"
+      }
+    ]
+  },
+  {
+    "id": "honghaier",
+    "name": "红孩儿",
+    "subtitle": "圣婴大王 · 锐气与偏执",
+    "heroImage": "/characters/honghaier.webp",
+    "summary": "你聪明、烈、快：反应迅捷，情绪也来得猛。你讨厌被小看，容易较真；若学会把火用在正确的地方，会非常耀眼。",
+    "traits": [
+      {
+        "word": "聪明外露",
+        "explanation": "你学得快、点子多，喜欢赢的感觉。"
+      },
+      {
+        "word": "好胜心强",
+        "explanation": "被挑衅时你会立刻进入战斗状态。"
+      },
+      {
+        "word": "情绪汹涌",
+        "explanation": "你需要出口与规则，否则容易把自己烧到。"
+      },
+      {
+        "word": "成长极快",
+        "explanation": "一旦服气与专注，你的迭代速度惊人。"
+      }
+    ]
+  },
+  {
+    "id": "baigujing",
+    "name": "白骨精",
+    "subtitle": "变化 · 洞察与生存",
+    "heroImage": "/characters/baigujing.webp",
+    "summary": "你极会读人、读局势，擅长用不同面貌适应环境。这不是虚伪，而是一种生存智慧；你也清楚真诚该留给谁。",
+    "traits": [
+      {
+        "word": "察言观色",
+        "explanation": "你能快速判断对方的需求、恐惧与动机。"
+      },
+      {
+        "word": "灵活应变",
+        "explanation": "计划受阻时，你比别人更快换路径。"
+      },
+      {
+        "word": "目标导向",
+        "explanation": "你清楚自己要什么，愿意为此承担误解。"
+      },
+      {
+        "word": "内心清醒",
+        "explanation": "场面上的「扮演」之外，你仍保留判断与自省。"
+      }
+    ]
+  },
+  {
+    "id": "liuer",
+    "name": "六耳猕猴",
+    "subtitle": "镜像 · 模仿与争锋",
+    "heroImage": "/characters/liuer.webp",
+    "summary": "你学得快、跟得紧，有时甚至强到让人不安。你渴望被看见、被承认「我也能」；真正的课题是找到独属于你的路，而不是永远对照别人。",
+    "traits": [
+      {
+        "word": "极高悟性",
+        "explanation": "你善于复制优秀范式并快速上手。"
+      },
+      {
+        "word": "竞争意识",
+        "explanation": "你心里有一把尺，总在衡量自己与强者差距。"
+      },
+      {
+        "word": "身份焦虑",
+        "explanation": "你害怕被定义成「附属」或「替身」。"
+      },
+      {
+        "word": "破局潜能",
+        "explanation": "当你停止比较，你的创造力会突然释放。"
+      }
+    ]
+  },
+  {
+    "id": "huangmei",
+    "name": "黄眉大王",
+    "subtitle": "小雷音 · 执念与僭越",
+    "heroImage": "/characters/huangmei.webp",
+    "summary": "你野心与自信都强，甚至想把「理想秩序」提前搬到现实里。你容易把手段正当化；若能把执念转成建设性标准，会是极强的领导者。",
+    "traits": [
+      {
+        "word": "强烈自信",
+        "explanation": "你相信自己的想法值得被世界采纳。"
+      },
+      {
+        "word": "规则重构",
+        "explanation": "你不满足于旧框架，想按自己的蓝图重来。"
+      },
+      {
+        "word": "冒险倾向",
+        "explanation": "你愿意为捷径或大变局承担风险。"
+      },
+      {
+        "word": "需防偏执",
+        "explanation": "你要警惕把「正确」当成唯一，忽略他人感受。"
+      }
+    ]
+  },
+  {
+    "id": "kuimulang",
+    "name": "奎木狼",
+    "subtitle": "星君下凡 · 孤独与深情",
+    "heroImage": "/characters/kuimulang.webp",
+    "summary": "你身上常有「不合群」的气质：标准独特、情感浓烈。你愿意为认定的人付出极端的耐心与坚持，哪怕外界不理解。",
+    "traits": [
+      {
+        "word": "深情专一",
+        "explanation": "你对少数关系投入极深，不轻易放手。"
+      },
+      {
+        "word": "独行气质",
+        "explanation": "你能在孤独里自洽，不依赖热闹确认价值。"
+      },
+      {
+        "word": "倔强隐忍",
+        "explanation": "委屈与压力你常自己吞，表面仍维持平静。"
+      },
+      {
+        "word": "内在骄傲",
+        "explanation": "你有自己的尊严线，讨好不是你的默认选项。"
+      }
+    ]
+  },
+  {
+    "id": "milefo",
+    "name": "弥勒佛",
+    "subtitle": "未来佛 · 豁达与松弛",
+    "heroImage": "/characters/milefo.webp",
+    "summary": "你自带松弛感：爱笑、能接梗，也能在紧绷时把大家带回人间烟火。你心里清楚轻重，只是选择用柔软包装锋利。",
+    "traits": [
+      {
+        "word": "豁达开朗",
+        "explanation": "你不爱钻牛角尖，懂得给事情留白。"
+      },
+      {
+        "word": "以柔克刚",
+        "explanation": "你用幽默与包容化解对抗，比硬碰硬更有效。"
+      },
+      {
+        "word": "人缘磁场",
+        "explanation": "你愿意让人放松下来，团队氛围常因你变好。"
+      },
+      {
+        "word": "大智若愚",
+        "explanation": "表面随和，关键判断并不含糊。"
+      }
+    ]
+  },
+  {
+    "id": "wenshu",
+    "name": "文殊菩萨",
+    "subtitle": "智慧 · 辨析与启发",
+    "heroImage": "/characters/wenshu.webp",
+    "summary": "你擅长把混乱的问题拆成可思考的层次，用提问代替说教。你相信智慧不是背诵答案，而是让人自己看见盲点。",
+    "traits": [
+      {
+        "word": "逻辑清晰",
+        "explanation": "你说话有条理，能把复杂讲简单。"
+      },
+      {
+        "word": "启发式沟通",
+        "explanation": "你更喜欢引导对方自己想通，而不是直接给结论。"
+      },
+      {
+        "word": "理性冷静",
+        "explanation": "情绪高涨时，你仍保留一块冷静观察的位置。"
+      },
+      {
+        "word": "追求真知",
+        "explanation": "你讨厌自欺，也愿意承认未知。"
+      }
+    ]
+  },
+  {
+    "id": "puxian",
+    "name": "普贤菩萨",
+    "subtitle": "行愿 · 实践与坚持",
+    "heroImage": "/characters/puxian.webp",
+    "summary": "你相信「行」比「说」重要：愿力要落在日复一日的行动里。你不炫技，但耐力惊人，能把别人放弃的路走下去。",
+    "traits": [
+      {
+        "word": "脚踏实地",
+        "explanation": "你爱用清单、节奏与复盘，把目标拆成每天可做的小事。"
+      },
+      {
+        "word": "愿行合一",
+        "explanation": "你讨厌空喊口号，承诺了就会持续投入。"
+      },
+      {
+        "word": "温和坚韧",
+        "explanation": "你不张扬，但最难的阶段往往是你扛下来的。"
+      },
+      {
+        "word": "利他实践",
+        "explanation": "你愿意把能力用在让别人也走得动的地方。"
+      }
+    ]
+  },
+  {
+    "id": "dapeng",
+    "name": "金翅大鹏",
+    "subtitle": "极速 · 骄傲与俯瞰",
+    "heroImage": "/characters/dapeng.webp",
+    "summary": "你眼光高、动作快，讨厌拖泥带水。你天生有掌控感与优越感，也容易不耐烦；若学会尊重慢节奏的人，你的领导力会更完整。",
+    "traits": [
+      {
+        "word": "决断迅猛",
+        "explanation": "你能快速拍板并推动执行，不恋战。"
+      },
+      {
+        "word": "视野居高临下",
+        "explanation": "你习惯先看全局走势，再决定落子。"
+      },
+      {
+        "word": "骄傲坦率",
+        "explanation": "你不屑伪装强大，也不爱示弱。"
+      },
+      {
+        "word": "效率至上",
+        "explanation": "重复低效对你是一种折磨，你会推动改变。"
+      }
+    ]
   }
 ]

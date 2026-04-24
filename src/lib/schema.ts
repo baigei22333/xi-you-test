@@ -9,6 +9,22 @@ export const characterIdSchema = z.enum([
   "guanyin",
   "erlang",
   "nezha",
+  "yudi",
+  "rulai",
+  "puti",
+  "taishang",
+  "zhenyuanzi",
+  "niuwang",
+  "tieshan",
+  "honghaier",
+  "baigujing",
+  "liuer",
+  "huangmei",
+  "kuimulang",
+  "milefo",
+  "wenshu",
+  "puxian",
+  "dapeng",
 ]);
 
 export type CharacterId = z.infer<typeof characterIdSchema>;
@@ -42,4 +58,4 @@ export const characterSchema = z.object({
 });
 
 export const questionsFileSchema = z.array(questionSchema).length(24);
-export const charactersFileSchema = z.array(characterSchema).length(8);
+export const charactersFileSchema = z.array(characterSchema).length(24);

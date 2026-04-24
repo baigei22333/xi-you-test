@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "optimize:characters": "node scripts/optimize-character-images.mjs",
+    "derive:scores": "node scripts/derive-24-scores.mjs",
     "prebuild": "node scripts/optimize-character-images.mjs",
     "build": "next build",
     "preview:static": "npx --yes serve@14 out -l 8788",
