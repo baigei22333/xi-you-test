@@ -1,0 +1,626 @@
+[
+  {
+    "id": "q1",
+    "prompt": "遇到突发状况时，你的第一反应更接近？",
+    "options": [
+      {
+        "id": "a",
+        "label": "先稳住节奏，确认大家是否安全、是否需要分工",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 3, "bailongma": 1, "guanyin": 2, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "立刻找突破口，先把最卡住的那环解决掉",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 1, "shaseng": 1, "bailongma": 0, "guanyin": 0, "erlang": 2, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "先判断有没有触碰底线或原则问题",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 2, "nezha": 1 }
+      },
+      {
+        "id": "d",
+        "label": "先缓一口气，用玩笑或转移注意力让场面松一点",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q2",
+    "prompt": "在团队里，你更常被需要扮演哪种角色？",
+    "options": [
+      {
+        "id": "a",
+        "label": "定方向、讲意义，让团队记得为何而战",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 0, "guanyin": 2, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "冲锋破局，专门啃硬骨头",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 2, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "粘合气氛，让合作不那么紧绷",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 2, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "兜底与执行，把流程默默跑顺",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 3, "bailongma": 3, "guanyin": 0, "erlang": 1, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q3",
+    "prompt": "当别人误解你时，你更倾向？",
+    "options": [
+      {
+        "id": "a",
+        "label": "解释清楚，但点到为止，给对方留台阶",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 3, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "用事实与结果说话，不喜欢纠缠情绪",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 0, "erlang": 3, "nezha": 1 }
+      },
+      {
+        "id": "c",
+        "label": "当场说清楚，不接受含糊带过",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 1, "nezha": 3 }
+      },
+      {
+        "id": "d",
+        "label": "先自嘲一下，把尴尬化开，再慢慢沟通",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q4",
+    "prompt": "你更认同哪种「强大」？",
+    "options": [
+      {
+        "id": "a",
+        "label": "能扛事、能破局，关键时刻顶得住",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 0, "erlang": 2, "nezha": 2 }
+      },
+      {
+        "id": "b",
+        "label": "能稳住自己，也能稳住团队的情绪与节奏",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 1, "shaseng": 3, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "c",
+        "label": "能看透人心与局势，一句话点醒局中人",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 3, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "能坚持初心，不被短期得失带偏",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 1, "erlang": 1, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q5",
+    "prompt": "面对长期而枯燥的目标，你更依赖什么走下去？",
+    "options": [
+      {
+        "id": "a",
+        "label": "意义感：我知道这件事值得",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 2, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "成就感：不断解锁小胜利",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 2, "nezha": 2 }
+      },
+      {
+        "id": "c",
+        "label": "习惯与纪律：每天推进一点点",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 2, "bailongma": 2, "guanyin": 0, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "生活调剂：允许自己舒服一点再继续",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q6",
+    "prompt": "做决定时，你更信任？",
+    "options": [
+      {
+        "id": "a",
+        "label": "价值观与原则：这件事该不该做",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 1 }
+      },
+      {
+        "id": "b",
+        "label": "直觉与魄力：先干再调整",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "信息与推演：把风险拆清楚",
+        "scores": { "tangseng": 0, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 0, "guanyin": 1, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "大家的感受：尽量让多数人能接受",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 2, "shaseng": 2, "bailongma": 0, "guanyin": 3, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q7",
+    "prompt": "你更害怕哪一种失败？",
+    "options": [
+      {
+        "id": "a",
+        "label": "辜负信任：让在乎的人失望",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 2, "bailongma": 3, "guanyin": 1, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "失去底线：变成自己不喜欢的人",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 2, "erlang": 2, "nezha": 2 }
+      },
+      {
+        "id": "c",
+        "label": "无能为力：明明该赢却输了",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 1, "nezha": 3 }
+      },
+      {
+        "id": "d",
+        "label": "被误解：明明努力却不被看见",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 1, "shaseng": 1, "bailongma": 2, "guanyin": 2, "erlang": 1, "nezha": 1 }
+      }
+    ]
+  },
+  {
+    "id": "q8",
+    "prompt": "学习新东西时，你更像？",
+    "options": [
+      {
+        "id": "a",
+        "label": "边练边学，实战中成长最快",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 1, "nezha": 2 }
+      },
+      {
+        "id": "b",
+        "label": "先搭框架，再系统填充",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 0, "guanyin": 2, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "c",
+        "label": "跟着靠谱的人一步步来",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 1, "shaseng": 3, "bailongma": 2, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "需要意义感，知道学了要用来做什么",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q9",
+    "prompt": "你如何处理与权威或规则的关系？",
+    "options": [
+      {
+        "id": "a",
+        "label": "尊重规则，但会争取更合理的解释空间",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "规则不合理就质疑，甚至打破重来",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "先执行到位，再私下优化流程",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 3, "bailongma": 2, "guanyin": 0, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "能用幽默化解对抗，减少硬碰硬",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "prompt": "你更欣赏哪种领导/榜样？",
+    "options": [
+      {
+        "id": "a",
+        "label": "以身作则、以德服人",
+        "scores": { "tangseng": 3, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "能打胜仗、敢担责",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 2, "nezha": 2 }
+      },
+      {
+        "id": "c",
+        "label": "冷静理性、凡事有章法",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 0, "guanyin": 1, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "善解人意、让人愿意跟着走",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 1, "shaseng": 1, "bailongma": 0, "guanyin": 3, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "prompt": "压力大时，你更常用的自我修复方式是？",
+    "options": [
+      {
+        "id": "a",
+        "label": "运动、行动、把能量耗掉",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 1, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 2, "nezha": 3 }
+      },
+      {
+        "id": "b",
+        "label": "独处整理思绪，写下来或理清优先级",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 1, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "c",
+        "label": "找信任的人聊一聊，获得视角",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 2, "shaseng": 0, "bailongma": 0, "guanyin": 3, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "吃点好的、玩一会儿，先把自己哄好",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "prompt": "你对「人情世故」的态度？",
+    "options": [
+      {
+        "id": "a",
+        "label": "必要，但不想被绑架",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 2, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "擅长，也愿意照顾场面",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 3, "shaseng": 1, "bailongma": 0, "guanyin": 2, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "c",
+        "label": "更在意效率，讨厌绕弯子",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 3, "nezha": 2 }
+      },
+      {
+        "id": "d",
+        "label": "愿意体谅，但原则不让",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 2, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 1 }
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "prompt": "你更在意别人说你什么？",
+    "options": [
+      {
+        "id": "a",
+        "label": "不靠谱 / 说到做不到",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 3, "bailongma": 2, "guanyin": 0, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "懦弱 / 没有担当",
+        "scores": { "tangseng": 1, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 1, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "虚伪 / 不真诚",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 2, "shaseng": 0, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 1 }
+      },
+      {
+        "id": "d",
+        "label": "冷漠 / 不近人情",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 1, "shaseng": 1, "bailongma": 0, "guanyin": 3, "erlang": 1, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "prompt": "面对批评，你更常见的反应是？",
+    "options": [
+      {
+        "id": "a",
+        "label": "先听完，提取可改进点",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 2, "bailongma": 2, "guanyin": 2, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "当场反驳不合理之处",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "表面平静，内心会反复琢磨",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 3, "guanyin": 1, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "用玩笑带过，但私下会改",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 1, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "prompt": "你更喜欢的相处距离是？",
+    "options": [
+      {
+        "id": "a",
+        "label": "热烈直接，有话直说",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 2, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 3 }
+      },
+      {
+        "id": "b",
+        "label": "温和克制，彼此留空间",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 0, "shaseng": 2, "bailongma": 2, "guanyin": 3, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "c",
+        "label": "边界清晰，合作高效",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 0, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "轻松搞笑，别太严肃",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 1, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "prompt": "你认为自己最大的优点是？",
+    "options": [
+      {
+        "id": "a",
+        "label": "善良与原则感",
+        "scores": { "tangseng": 3, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 1, "nezha": 1 }
+      },
+      {
+        "id": "b",
+        "label": "执行力与破局力",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 1, "bailongma": 0, "guanyin": 0, "erlang": 2, "nezha": 2 }
+      },
+      {
+        "id": "c",
+        "label": "稳定与可靠",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 3, "bailongma": 3, "guanyin": 0, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "洞察力与智慧",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 3, "erlang": 2, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "prompt": "如果人生是一场修行，你更想修哪一种功课？",
+    "options": [
+      {
+        "id": "a",
+        "label": "耐心：在慢里看见长期价值",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 0, "shaseng": 2, "bailongma": 3, "guanyin": 2, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "勇气：敢于承担后果",
+        "scores": { "tangseng": 1, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 1, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "清明：不被欲望带跑",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 2, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "柔软：与世界和解但不失锋芒",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 2, "shaseng": 1, "bailongma": 0, "guanyin": 3, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "prompt": "你对「名声/面子」的看法？",
+    "options": [
+      {
+        "id": "a",
+        "label": "不重要，结果与内心自洽更重要",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 2, "erlang": 2, "nezha": 1 }
+      },
+      {
+        "id": "b",
+        "label": "需要，但不值得为此出卖原则",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 1, "shaseng": 1, "bailongma": 1, "guanyin": 1, "erlang": 2, "nezha": 1 }
+      },
+      {
+        "id": "c",
+        "label": "该争就争，不吃哑巴亏",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 1, "nezha": 3 }
+      },
+      {
+        "id": "d",
+        "label": "能用轻松方式化解最好",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 1, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "prompt": "你更可能被哪种动机驱动？",
+    "options": [
+      {
+        "id": "a",
+        "label": "守护：保护重要的人与价值",
+        "scores": { "tangseng": 2, "wukong": 2, "bajie": 0, "shaseng": 2, "bailongma": 3, "guanyin": 2, "erlang": 1, "nezha": 1 }
+      },
+      {
+        "id": "b",
+        "label": "证明：我能做到别人做不到的事",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 2, "nezha": 2 }
+      },
+      {
+        "id": "c",
+        "label": "理解：把复杂世界看清楚",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 3, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "体验：人生要过得有滋味",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "prompt": "结束一段关系（合作/友谊）时，你更倾向？",
+    "options": [
+      {
+        "id": "a",
+        "label": "体面收场，尽量不伤颜面",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 1, "shaseng": 2, "bailongma": 1, "guanyin": 3, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "快刀斩乱麻，减少消耗",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 2, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "把账算清，把话说透",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 0, "erlang": 3, "nezha": 1 }
+      },
+      {
+        "id": "d",
+        "label": "慢慢疏远，让时间稀释",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 2, "shaseng": 1, "bailongma": 3, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q21",
+    "prompt": "你更喜欢的叙事英雄是？",
+    "options": [
+      {
+        "id": "a",
+        "label": "历经磨难仍不改初心的朝圣者",
+        "scores": { "tangseng": 3, "wukong": 1, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "以一己之力扭转局面的战士",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 1, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "看透人心仍选择温柔的智者",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 0, "bailongma": 0, "guanyin": 3, "erlang": 2, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "苦中作乐、带着烟火气的旅人",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 2, "bailongma": 0, "guanyin": 1, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q22",
+    "prompt": "你对「承诺」的态度？",
+    "options": [
+      {
+        "id": "a",
+        "label": "说到做到，哪怕吃亏",
+        "scores": { "tangseng": 2, "wukong": 1, "bajie": 0, "shaseng": 3, "bailongma": 3, "guanyin": 1, "erlang": 2, "nezha": 1 }
+      },
+      {
+        "id": "b",
+        "label": "不轻易承诺，承诺了就全力完成",
+        "scores": { "tangseng": 1, "wukong": 1, "bajie": 0, "shaseng": 2, "bailongma": 2, "guanyin": 1, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "c",
+        "label": "看情况，不合理会重新谈",
+        "scores": { "tangseng": 1, "wukong": 2, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 2, "erlang": 1, "nezha": 2 }
+      },
+      {
+        "id": "d",
+        "label": "更愿意给「当下尽力」而不是空头支票",
+        "scores": { "tangseng": 2, "wukong": 0, "bajie": 2, "shaseng": 1, "bailongma": 1, "guanyin": 2, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q23",
+    "prompt": "你更在意生活的哪种质感？",
+    "options": [
+      {
+        "id": "a",
+        "label": "秩序感：一切井井有条",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 2, "bailongma": 1, "guanyin": 1, "erlang": 3, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "自由感：不被束缚",
+        "scores": { "tangseng": 0, "wukong": 2, "bajie": 1, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 3 }
+      },
+      {
+        "id": "c",
+        "label": "意义感：日子要朝向什么",
+        "scores": { "tangseng": 3, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 2, "guanyin": 2, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "滋味感：好吃好玩好热闹",
+        "scores": { "tangseng": 0, "wukong": 0, "bajie": 3, "shaseng": 0, "bailongma": 0, "guanyin": 0, "erlang": 0, "nezha": 0 }
+      }
+    ]
+  },
+  {
+    "id": "q24",
+    "prompt": "如果用一句话形容你，你更希望是？",
+    "options": [
+      {
+        "id": "a",
+        "label": "温柔而有原则的人",
+        "scores": { "tangseng": 3, "wukong": 0, "bajie": 0, "shaseng": 1, "bailongma": 1, "guanyin": 3, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "b",
+        "label": "能打硬仗也能扛责任的人",
+        "scores": { "tangseng": 0, "wukong": 3, "bajie": 0, "shaseng": 2, "bailongma": 2, "guanyin": 0, "erlang": 2, "nezha": 1 }
+      },
+      {
+        "id": "c",
+        "label": "让人安心、永远有回音的人",
+        "scores": { "tangseng": 1, "wukong": 0, "bajie": 0, "shaseng": 3, "bailongma": 3, "guanyin": 1, "erlang": 1, "nezha": 0 }
+      },
+      {
+        "id": "d",
+        "label": "锋利但不麻木、敢重塑自己的人",
+        "scores": { "tangseng": 0, "wukong": 1, "bajie": 0, "shaseng": 0, "bailongma": 1, "guanyin": 0, "erlang": 2, "nezha": 3 }
+      }
+    ]
+  }
+]

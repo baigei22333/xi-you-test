@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" fill="none">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#301828"/>
+      <stop offset="100%" stop-color="#140810"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b4a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffc14a" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" rx="24" fill="url(#bg8)"/>
+  <polygon points="320,200 420,460 220,460" fill="url(#flame)"/>
+  <text x="320" y="620" text-anchor="middle" fill="#ffc14a" font-family="serif" font-size="56" font-weight="600">ê</text>
+  <text x="320" y="680" text-anchor="middle" fill="#e8b8c8" font-family="sans-serif" font-size="22"> · ÍQ</text>
+</svg>
