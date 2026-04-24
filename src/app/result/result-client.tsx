@@ -1,16 +1,31 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import Image from "next/image";
+import { startTransition, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { RotateCcw, Sparkles } from "lucide-react";
 import { getCharacterById } from "@/lib/data";
+import { readResultFallbackId } from "@/lib/quiz-storage";
 import { characterIdSchema } from "@/lib/schema";
 
 export function ResultClient() {
   const params = useSearchParams();
-  const raw = params.get("c");
+  const paramC = params.get("c");
+  const [storageC, setStorageC] = useState<string | null>(null);
+  const [storageChecked, setStorageChecked] = useState(false);
+
+  useEffect(() => {
+    startTransition(() => {
+      if (paramC) {
+        setStorageChecked(true);
+        return;
+      }
+      setStorageC(readResultFallbackId());
+      setStorageChecked(true);
+    });
+  }, [paramC]);
+
+  const raw = paramC ?? storageC;
   const parsed = raw ? characterIdSchema.safeParse(raw) : null;
   const id = parsed?.success ? parsed.data : null;
   const character = id ? getCharacterById(id) : undefined;
@@ -24,6 +39,14 @@ export function ResultClient() {
     () => (character ? `${character.name}主题插画` : ""),
     [character],
   );
+
+  if (!paramC && !storageChecked) {
+    return (
+      <p className="text-center text-[color:var(--muted)]" role="status">
+        加载结果…
+      </p>
+    );
+  }
 
   if (!character || !id) {
     return (
@@ -70,14 +93,16 @@ export function ResultClient() {
 
       <article className="overflow-hidden rounded-3xl border border-[color:var(--card-border)] bg-[color:var(--card)] shadow-[0_28px_100px_rgba(0,0,0,0.45)] backdrop-blur-md">
         <div className="relative aspect-[4/5] w-full max-h-[min(70vh,520px)] bg-black/30 sm:aspect-[16/10] sm:max-h-[420px]">
-          <Image
+          {/* 使用原生 img：SVG + next/image fill 在部分静态托管环境下不渲染 */}
+          {/* eslint-disable-next-line @next/next/no-img-element -- SVG 英雄区需可靠展示 */}
+          <img
             src={character.heroImage}
             alt={heroAlt}
-            fill
-            className="object-cover object-top"
-            priority
-            sizes="(max-width: 768px) 100vw, 42rem"
-            unoptimized
+            width={640}
+            height={800}
+            className="absolute inset-0 h-full w-full object-cover object-top"
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">

@@ -13,8 +13,10 @@ import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { QUESTIONS } from "@/lib/data";
 import {
   clearQuiz,
+  clearResultFallbackId,
   loadQuiz,
   saveQuiz,
+  saveResultFallbackId,
   type PersistedQuiz,
 } from "@/lib/quiz-storage";
 import { computeResult, type Answers } from "@/lib/scoring";
@@ -49,6 +51,7 @@ export function QuizClient() {
 
   useEffect(() => {
     if (!hydrated) return;
+    if (allAnswered(answers)) return;
     const payload: PersistedQuiz = { answers, step };
     saveQuiz(payload);
   }, [answers, hydrated, step]);
@@ -59,14 +62,17 @@ export function QuizClient() {
 
   const selected = question ? answers[question.id] : undefined;
 
-  const goResult = useCallback(
-    (finalAnswers: Answers) => {
-      const id = computeResult(finalAnswers);
-      clearQuiz();
-      router.push(`/result?c=${encodeURIComponent(id)}`);
-    },
-    [router],
-  );
+  const goResult = useCallback((finalAnswers: Answers) => {
+    const id = computeResult(finalAnswers);
+    clearQuiz();
+    saveResultFallbackId(id);
+    const path = `/result?c=${encodeURIComponent(id)}`;
+    if (typeof window !== "undefined") {
+      window.location.assign(path);
+    } else {
+      router.push(path);
+    }
+  }, [router]);
 
   const onPick = (optionId: string) => {
     if (!question) return;
@@ -85,6 +91,7 @@ export function QuizClient() {
 
   const onRestart = () => {
     clearQuiz();
+    clearResultFallbackId();
     setAnswers({});
     setStep(0);
   };
