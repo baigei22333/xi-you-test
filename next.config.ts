@@ -7,6 +7,9 @@ import type { NextConfig } from "next";
  * 那会走 OpenNext/Workers，期望 `.next/standalone`，与 `output: "export"` 冲突。
  * Pages 正确设置：Build command = `npm run build`，Output directory = `out`，Deploy command = 留空；
  * Framework preset 选 None（不要选会自动注入 wrangler 的 Next.js Workers 模板）。
+ *
+ * 静态资源（含 /characters/*.webp）已由 Cloudflare Pages 默认走全球边缘节点，相当于免费 CDN。
+ * 首屏大图仍建议控制体积：`prebuild` 会把目录内 PNG 转为 WebP；`public/_headers` 为角色图加长缓存。
  */
 const nextConfig: NextConfig = {
   output: "export",

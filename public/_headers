@@ -1,0 +1,3 @@
+# Cloudflare Pages：角色图边缘缓存（Pages 本身已是全球 CDN；大头在缩小体积，见 WebP + prebuild）
+/characters/*
+  Cache-Control: public, max-age=2592000
