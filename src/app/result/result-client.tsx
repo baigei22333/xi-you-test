@@ -94,7 +94,7 @@ export function ResultClient() {
       <article className="overflow-hidden rounded-3xl border border-[color:var(--card-border)] bg-[color:var(--card)] shadow-[0_28px_100px_rgba(0,0,0,0.45)] backdrop-blur-md">
         <div className="relative w-full overflow-hidden bg-black/30">
           {/* 原生 img + 块级布局：避免 absolute/fill 与 aspect 组合在部分环境下高度为 0 */}
-          {/* eslint-disable-next-line @next/next/no-img-element -- SVG 英雄区需可靠展示 */}
+          {/* eslint-disable-next-line @next/next/no-img-element -- 角色立绘 PNG 需可靠展示 */}
           <img
             src={character.heroImage}
             alt={heroAlt}

@@ -3,7 +3,7 @@
     "id": "tangseng",
     "name": "唐僧",
     "subtitle": "玄奘 · 信念与慈悲",
-    "heroImage": "/characters/tangseng.svg",
+    "heroImage": "/characters/tangseng.png",
     "summary": "你心中有清晰的方向感，愿意为了更大的意义而坚持。面对杂音时，你仍选择温和与克制，把「为何出发」看得比「走得快」更重要。",
     "traits": [
       {
@@ -28,7 +28,7 @@
     "id": "wukong",
     "name": "孙悟空",
     "subtitle": "齐天大圣 · 机变与担当",
-    "heroImage": "/characters/wukong.svg",
+    "heroImage": "/characters/wukong.png",
     "summary": "你反应快、敢扛事，遇到难题会先想办法破局。你讨厌拖泥带水，也更愿意亲自把关键一环做到位。",
     "traits": [
       {
@@ -53,7 +53,7 @@
     "id": "bajie",
     "name": "猪八戒",
     "subtitle": "天蓬 · 人情与乐天",
-    "heroImage": "/characters/bajie.svg",
+    "heroImage": "/characters/bajie.png",
     "summary": "你懂得生活里的烟火气，也擅长用幽默化解尴尬。你追求舒服与真实，但关键时刻也拎得清轻重。",
     "traits": [
       {
@@ -78,7 +78,7 @@
     "id": "shaseng",
     "name": "沙僧",
     "subtitle": "卷帘大将 · 可靠与沉稳",
-    "heroImage": "/characters/shaseng.svg",
+    "heroImage": "/characters/shaseng.png",
     "summary": "你是那种「有你在就安心」的人：话不多，但事事有回音。你愿意做承上启下的那一环，让整体更稳。",
     "traits": [
       {
@@ -103,7 +103,7 @@
     "id": "bailongma",
     "name": "白龙马",
     "subtitle": "西海玉龙 · 隐忍与忠诚",
-    "heroImage": "/characters/bailongma.svg",
+    "heroImage": "/characters/bailongma.png",
     "summary": "你习惯把锋芒收起来，用行动证明立场。你不抢镜，但关键时刻从不缺席；忠诚对你不是口号，是选择。",
     "traits": [
       {
@@ -128,7 +128,7 @@
     "id": "guanyin",
     "name": "观音菩萨",
     "subtitle": "慈悲智慧 · 观照与成全",
-    "heroImage": "/characters/guanyin.svg",
+    "heroImage": "/characters/guanyin.png",
     "summary": "你善于倾听与点拨，能把复杂问题说得清楚，也能给别人留出自省的空间。你温和，但有洞见。",
     "traits": [
       {
@@ -153,7 +153,7 @@
     "id": "erlang",
     "name": "二郎神",
     "subtitle": "杨戬 · 自律与清明",
-    "heroImage": "/characters/erlang.svg",
+    "heroImage": "/characters/erlang.png",
     "summary": "你标准高、节奏稳，擅长把复杂任务拆成可执行步骤。你冷静，不是因为冷漠，而是因为你更相信理性与练习。",
     "traits": [
       {
@@ -178,7 +178,7 @@
     "id": "nezha",
     "name": "哪吒",
     "subtitle": "三太子 · 锐气与自我重塑",
-    "heroImage": "/characters/nezha.svg",
+    "heroImage": "/characters/nezha.png",
     "summary": "你身上有鲜明的个性与锋芒，敢于质疑不合理之处。你也在学习把锐气变成建设性力量，走出自己的路。",
     "traits": [
       {
