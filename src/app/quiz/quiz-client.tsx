@@ -20,7 +20,7 @@ import {
   saveResultFallbackId,
   type PersistedQuiz,
 } from "@/lib/quiz-storage";
-import { trackQuizComplete } from "@/lib/quiz-analytics";
+import { flushQuizAnalytics } from "@/lib/quiz-analytics";
 import {
   computeResult,
   computeScoreBreakdown,
@@ -42,22 +42,24 @@ export function QuizClient() {
     const saved = loadQuiz();
     if (saved && allAnswered(saved.answers)) {
       const id = computeResult(saved.answers);
-      trackQuizComplete({
-        characterId: id,
-        answers: saved.answers,
-        scores: computeScoreBreakdown(saved.answers),
-      });
-      clearQuiz();
-      saveResultFallbackId(id);
       flushSync(() => {
         setIsFinishing(true);
         setHydrated(true);
       });
-      requestAnimationFrame(() => {
-        window.location.replace(
-          `${window.location.origin}/result?c=${encodeURIComponent(id)}`,
-        );
-      });
+      void (async () => {
+        await flushQuizAnalytics({
+          characterId: id,
+          answers: saved.answers,
+          scores: computeScoreBreakdown(saved.answers),
+        });
+        clearQuiz();
+        saveResultFallbackId(id);
+        requestAnimationFrame(() => {
+          window.location.replace(
+            `${window.location.origin}/result?c=${encodeURIComponent(id)}`,
+          );
+        });
+      })();
       return;
     }
     startTransition(() => {
@@ -85,22 +87,24 @@ export function QuizClient() {
 
   const goResult = useCallback((finalAnswers: Answers) => {
     const id = computeResult(finalAnswers);
-    trackQuizComplete({
-      characterId: id,
-      answers: finalAnswers,
-      scores: computeScoreBreakdown(finalAnswers),
-    });
-    clearQuiz();
-    saveResultFallbackId(id);
     const path = `/result?c=${encodeURIComponent(id)}`;
     flushSync(() => setIsFinishing(true));
-    requestAnimationFrame(() => {
-      if (typeof window !== "undefined") {
-        window.location.assign(path);
-      } else {
-        router.push(path);
-      }
-    });
+    void (async () => {
+      await flushQuizAnalytics({
+        characterId: id,
+        answers: finalAnswers,
+        scores: computeScoreBreakdown(finalAnswers),
+      });
+      clearQuiz();
+      saveResultFallbackId(id);
+      requestAnimationFrame(() => {
+        if (typeof window !== "undefined") {
+          window.location.assign(path);
+        } else {
+          router.push(path);
+        }
+      });
+    })();
   }, [router]);
 
   const onPick = (optionId: string) => {

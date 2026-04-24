@@ -9,6 +9,8 @@ export type QuizAnalyticsPayload = {
   completedAt: string;
 };
 
+const FLUSH_TIMEOUT_MS = 5000;
+
 function analyticsEnabled(): boolean {
   return process.env.NEXT_PUBLIC_ENABLE_QUIZ_ANALYTICS === "1";
 }
@@ -26,23 +28,7 @@ function isAbsoluteHttpUrl(url: string): boolean {
   return url.startsWith("https://") || url.startsWith("http://");
 }
 
-/**
- * Fire-and-forget: 答题完成时上报（选项、各角色总分、匹配角色）。
- * 需设置 NEXT_PUBLIC_ENABLE_QUIZ_ANALYTICS=1 与 Worker 地址（任一名称）：
- * NEXT_PUBLIC_QUIZ_ANALYTICS_INGEST_URL 或 NEXT_PUBLIC_QUIZ_ANALYTICS_URL。
- * 若站点已启用 Cloudflare Zaraz，会额外调用 zaraz.track("quiz_complete", …)。
- */
-export function trackQuizComplete(
-  data: Omit<QuizAnalyticsPayload, "v" | "completedAt">,
-): void {
-  if (typeof window === "undefined" || !analyticsEnabled()) return;
-
-  const payload: QuizAnalyticsPayload = {
-    v: 1,
-    ...data,
-    completedAt: new Date().toISOString(),
-  };
-
+function fireZaraz(payload: QuizAnalyticsPayload): void {
   try {
     const zaraz = (
       window as unknown as {
@@ -62,6 +48,24 @@ export function trackQuizComplete(
   } catch {
     /* Zaraz 不可用时忽略 */
   }
+}
+
+/**
+ * 等待上报结束（或超时）后再跳转，避免 `location.assign` 立刻取消未完成的 fetch。
+ * 答题页完成时应使用此函数；需设置 NEXT_PUBLIC_ENABLE_QUIZ_ANALYTICS=1 与 Worker 地址。
+ */
+export async function flushQuizAnalytics(
+  data: Omit<QuizAnalyticsPayload, "v" | "completedAt">,
+): Promise<void> {
+  if (typeof window === "undefined" || !analyticsEnabled()) return;
+
+  const payload: QuizAnalyticsPayload = {
+    v: 1,
+    ...data,
+    completedAt: new Date().toISOString(),
+  };
+
+  fireZaraz(payload);
 
   const body = JSON.stringify(payload);
   const url = ingestUrl();
@@ -72,26 +76,51 @@ export function trackQuizComplete(
   if (token) headers.Authorization = `Bearer ${token}`;
 
   if (isAbsoluteHttpUrl(url)) {
-    void fetch(url, { method: "POST", headers, body, keepalive: true, mode: "cors" }).catch(
-      () => {},
-    );
+    const ctrl = new AbortController();
+    const t = window.setTimeout(() => ctrl.abort(), FLUSH_TIMEOUT_MS);
+    try {
+      await fetch(url, {
+        method: "POST",
+        headers,
+        body,
+        mode: "cors",
+        signal: ctrl.signal,
+        keepalive: true,
+      });
+    } catch {
+      /* 网络/超时/离线：不阻塞去结果页 */
+    } finally {
+      window.clearTimeout(t);
+    }
     return;
   }
 
   try {
     if (navigator.sendBeacon) {
       const blob = new Blob([body], { type: "application/json" });
-      const ok = navigator.sendBeacon(url, blob);
-      if (ok) return;
+      if (navigator.sendBeacon(url, blob)) return;
     }
   } catch {
     /* fallback below */
   }
 
-  void fetch(url, {
-    method: "POST",
-    headers,
-    body,
-    keepalive: true,
-  }).catch(() => {});
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers,
+      body,
+      keepalive: true,
+    });
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
+ * 兼容旧调用：不等待完成（不推荐在即将跳转前使用）。
+ */
+export function trackQuizComplete(
+  data: Omit<QuizAnalyticsPayload, "v" | "completedAt">,
+): void {
+  void flushQuizAnalytics(data);
 }
